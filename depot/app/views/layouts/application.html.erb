@@ -13,6 +13,13 @@
 	</div>
 	<div id="columns">
 		<div id="side"> 
+			<div id="cart">
+				<% if @cart %>
+	        		<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %> 
+	        			<%= render @cart %>
+					<% end %>
+				<% end %>
+			</div>
 			<h5><%= Time.now.to_formatted_s(:long_ordinal)  %></h5>
 			<h5>You entered <%= pluralize(session[:counter], "time") %></h5>
 			<ul>
