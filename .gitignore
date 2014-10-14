@@ -18,3 +18,7 @@ depot/tmp*
 
 
 depot/tmp/cache*
+
+*.pid
+
+*.log
